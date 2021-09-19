@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Loan Prediction</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Home</a>
+				<nav>
+					<ul>
+						<li><a href="Projects.html">Projects</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">A Machine Learning Approach into Loan Prediction</h1>
+							<span class="image fit"><img src="images/loan2.jpeg" alt="" /></span>
+							
+							<p><h3>Overview</h3>
+								Before giving out a loan, companies would need to access the loan eligibility of their clients and their capabilities to pay back the loan. <br>
+								Develop an API to determine the Loan eligibility of clients based on socio-economic factors.
+								
+								<h3>Tools / Packages Used</h3>
+								<ul>
+								  <li> Python </li>
+								  <li> Numpy </li>
+								  <li> Pandas </li>
+								  <li> Matplotlib and seaborn for data visualizations </li>
+								  <li> Scikit-learn for Machine Learning </li>
+								</ul>
+							</p>
+							<p><h3>Data</h3>
+								The data was gotten in two parts;
+								<ul>
+									<li> train.csv - the dataset for the model to be trained on consisting of past loans and their loan status </li>
+									<li> test.csv - the new customers for which we want to find their loan eligibility </li>
+								</ul>
+
+								The columns in the dataset are:
+								<ol>
+								<li>Gender</li>
+								<li>Married</li>
+								<li>Dependents</li>
+								<li>Education</li>
+								<li>Self_Employed</li>
+								<li>ApplicantIncome</li>
+								<li>CoapplicantIncome</li>
+								<li>LoanAmount</li>
+								<li>Loan_Amount_Term</li>
+								<li>Credit_History</li>
+								<li>Property_Area </li>
+								<li>Loan_Status</li>
+								</ol>
+								<p><h3>Heatmap Showing Relationship between variables</h3>
+									<span class="image"><img src="images/heatmap.png" alt="" /></span>
+								</p>
+								<h3>Feature engineering</h3>
+								Taking the input of ApplicantIncome and CoApplicantIncome, the sum was used to calculate the Total Income of the household
+								Adding this feature to the data increases the accuracy and precision of the models.
+							</p>
+							<p><h3>Model Performance</h3>
+								<li>Logistic Regression has an accuracy of 0.84.</li>
+								<li>Random Forest has an overall accuracy of 0.78 using GridSearchCV</li>
+								<span class="image"><img src="images/rfctest.png" alt="" /></span>
+								<li>Decision Trees has an overall accuracy of 0.71.</li>
+
+								<h3> API Development</h3>
+								A streamlit API is being built to collect user input and return the prediction of the model. This API is based on the random forest Classifier
+								as this model allows us to modify the parameters involved.
+							</p>
+							<p>View <a href="https://github.com/victordanok/Loan-Prediction-ML">Github repo</a> for the codes and notebooks </p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Victordanok. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
